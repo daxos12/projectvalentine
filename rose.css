@@ -246,7 +246,7 @@ body {
   position: relative;
   width: 70%;
   height: 80%;
-  background-image: url("/f790d798c2abaef52c09c45ae0a12d15.jpg");
+  background-image: url("f790d798c2abaef52c09c45ae0a12d15.jpg");
   background-size: cover;
   background-position: center;
   /* justify-self: center; */
@@ -332,7 +332,7 @@ body {
   position: relative;
   width: 70%;
   height: 80%;
-  background-image: url("/Kaisa\ laga\ mera\ mazak.jpg");
+  background-image: url("Kaisa\ laga\ mera\ mazak.jpg");
   background-size: cover;
   background-position: center;
   margin: auto;
