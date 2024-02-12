@@ -261,3 +261,14 @@
     text-align: center;
     font-size: larger
   }
+
+  #img1{
+    border: 2px black solid;
+    height: 70%;
+    width: 30%;
+    margin: auto;
+    align-items: center;
+    position: relative;
+    background-image: url("images.jpg");
+    background-size: cover;
+  }
