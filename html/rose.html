@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Day Card</title>
+    <link href="/css/rose.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<link href='https://fonts.googleapis.com/css?family=Solitreo' rel='stylesheet'>
+  <div class="container">
+    <div class="envelope"></div>
+    <div class="card">
+      <h1 class="message"> Kisi ne Kaha tha Red ki jagah Yellow roses le jaoge<br>usi Yellow roses ke sath puchta hu Will you be my </h1><br><br>
+      <h1 style="text-align: center;" >Valentine</h1>
+      <div class="heart"></div>
+    </div>
+    <div class="cover"></div>
+    <div class="lid"></div>
+    <div class="shadow"></div>
+    <br>
+    <br>
+    <br>
+    <br><br><br>
+  
+  </div>
+
+
+
+  <div id="yn">
+    <!-- <button id="yes">yes</button> -->
+    <button id="buttonCustom">yes</button>
+    <div id="overlayCustom" class="overlay-custom"></div>
+    <div id="cardCustom" class="card-custom">
+      <div class="center-custom">
+        <div class="content-custom">
+          <!-- <h2>Pop-up Card Content</h2>
+          <p>This is the content of the pop-up card.</p> -->
+        </div>
+      </div>
+      <button id="closeCustom" class="center-bottom-custom">Close</button>
+    </div>
+
+
+
+
+    <button id="myButton" class="move-on-hover">no</button>
+    <div id="popupOverlay" class="overlay"></div>
+  <div id="popupCard" class="card1">
+    <div class="center">
+      <div class="content">
+        <!-- <h2>Pop-up Card Content</h2>
+        <p>This is the content of the pop-up card.</p> -->
+      </div>
+    </div>
+    <button id="closeButton" class="center-bottom">Close</button>
+  </div>
+    
+  </div>
+  <script>
+const button = document.getElementById('myButton');
+let hoverCount = 0;
+
+button.addEventListener('mouseenter', () => {
+  if (hoverCount < 2) {
+    hoverCount++;
+    button.classList.add('move-on-hover');
+  } else {
+    button.classList.remove('move-on-hover');
+  }
+});
+const popupButton = document.getElementById('myButton');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupCard = document.getElementById('popupCard');
+    const closeButton = document.getElementById('closeButton');
+
+    popupButton.addEventListener('click', () => {
+      popupOverlay.classList.add('show');
+      popupCard.classList.add('show');
+    });
+
+    closeButton.addEventListener('click', () => {
+      popupOverlay.classList.remove('show');
+      popupCard.classList.remove('show');
+    });
+
+
+    const buttonCustom = document.getElementById('buttonCustom');
+    const overlayCustom = document.getElementById('overlayCustom');
+    const cardCustom = document.getElementById('cardCustom');
+    const closeCustom = document.getElementById('closeCustom');
+
+    buttonCustom.addEventListener('click', () => {
+      overlayCustom.classList.add('show-custom');
+      cardCustom.classList.add('show-custom');
+    });
+
+    closeCustom.addEventListener('click', () => {
+      overlayCustom.classList.remove('show-custom');
+      cardCustom.classList.remove('show-custom');
+    });
+
+  </script>
+</body>
+</html>

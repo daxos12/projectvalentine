@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Day Card</title>
+    <link href="/css/chai.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<link href='https://fonts.googleapis.com/css?family=Solitreo' rel='stylesheet'>
+  <div class="container">
+    <div class="envelope"></div>
+    <div class="card">
+      <h1 class="message">Abb bakki ki bate chai pite pite kr lrte hai 😊 <br>So lets have a cup of tea..?<br></h1>
+      <div class="heart"></div>
+    </div>
+    <div class="cover"></div>
+    <div class="lid"></div>
+    <div class="shadow"></div>
+    <br>
+    <br>
+    <br>
+    <br><br><br>
+  </div>
+
+  <div id="yn">
+    <a href="/html/rose.html">
+    <button id="yes"> yes </button>
+    </a>
+    <button id="myButton" class="move-on-hover">no</button>
+    <div id="popupOverlay" class="overlay"></div>
+  <div id="popupCard" class="card1">
+    <h2> Abb maan bhi jao na
+        <br>
+        aisa moka baar baar nhi atta
+    </h2>
+    <div id="closeb">
+        <button id="closeButton">Close</button>
+    </div>
+    <!-- <button id="closeButton">Close</button> -->
+  </div>
+
+  <script>
+
+const button = document.getElementById('myButton');
+let hoverCount = 0;
+
+button.addEventListener('mouseenter', () => {
+  if (hoverCount < 2) {
+    hoverCount++;
+    button.classList.add('move-on-hover');
+  } else {
+    button.classList.remove('move-on-hover');
+  }
+});
+const popupButton = document.getElementById('myButton');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupCard = document.getElementById('popupCard');
+    const closeButton = document.getElementById('closeButton');
+
+    popupButton.addEventListener('click', () => {
+      popupOverlay.classList.add('show');
+      popupCard.classList.add('show');
+    });
+
+    closeButton.addEventListener('click', () => {
+      popupOverlay.classList.remove('show');
+      popupCard.classList.remove('show');
+    });
+
+  </script>
+  
+</body>
+</html>
